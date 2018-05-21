@@ -12,6 +12,8 @@ Forked model used in a Seminar Neural Networks course at TU Delft, published by 
 
  67% Accuracy
 
+## Classification benchmarks via @isseu
+
  ![Angry Test](https://raw.githubusercontent.com/isseu/emotion-recognition-neural-networks/master/paper/matrix_final.png)
 
 ## Dataset
@@ -43,10 +45,10 @@ $ python3 emotion_recognition.py train
 $ python3 emotion_recognition.py poc
 ```
 
-## Presentation/Project Overview
+## Presentation/project overview
 
 [Link](https://github.com/jonathanloganmoran/emotion-recognition-neural-networks/blob/master/Emotion%20Recognition%20in%20CNNs.pdf)
 
-## Paper
+## Original Paper via @isseu
 
 [Link](https://github.com/isseu/emotion-recognition-neural-networks/blob/master/paper/Report_NN.pdf)

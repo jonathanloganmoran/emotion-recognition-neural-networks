@@ -1,4 +1,8 @@
 # Created by https://www.gitignore.io/api/osx
+
+Gudi_model_100_epochs_20000_faces.data
+Gudi_model_100_epochs_20000_faces
+
 .vscode/
 
 helen-datasets/

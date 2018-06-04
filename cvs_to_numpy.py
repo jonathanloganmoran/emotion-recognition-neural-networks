@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+#from constants import CASC_PATH, SIZE_FACE, EMOTIONS, SAVE_DATASET_IMAGES_FILENAME, SAVE_DATASET_LABELS_FILENAME, SAVE_DIRECTORY, DATASET_CSV_FILENAME
+from constants import *
+=======
 from constants import CASC_PATH, SIZE_FACE, EMOTIONS, SAVE_DATASET_IMAGES_FILENAME, SAVE_DATASET_LABELS_FILENAME, SAVE_DIRECTORY, DATASET_CSV_FILENAME
+>>>>>>> origin
 import cv2
 import pandas as pd
 import numpy as np
@@ -70,6 +75,31 @@ data = pd.read_csv(join(SAVE_DIRECTORY, DATASET_CSV_FILENAME))
 
 labels = []
 images = []
+<<<<<<< HEAD
+labels_test = []
+images_test = []
+index_set = 1
+index_test = 1
+index = 1
+total = data.shape[0]
+
+for index, row in data.iterrows():
+    emotion = emotion_to_vec(row['emotion'])
+    image = data_to_image(row['pixels'])
+    Usage = row['Usage']
+    if image is not None:
+        if Usage == "Training":
+            labels.append(emotion)
+            images.append(image)
+            # images.append(flip_image(image))
+            index_set += 1
+        else:
+            labels_test.append(emotion)
+            images_test.append(image)
+            index_test += 1
+    else:
+        print("Error")
+=======
 index = 1
 total = data.shape[0]
 for index, row in data.iterrows():
@@ -79,9 +109,18 @@ for index, row in data.iterrows():
         labels.append(emotion)
         images.append(image)
         # images.append(flip_image(image))
+>>>>>>> origin
     index += 1
     print("Progress: {}/{} {:.2f}%".format(index, total, index * 100.0 / total))
 
 print("Total: " + str(len(images)))
+<<<<<<< HEAD
+print("image: ", index_set)
+print("image_test: ", index_test)
+
+np.save('test_set_fer2013.npy', images_test)        # for validation set
+np.save('test_labels_fer2013.npy', labels_test)
+=======
+>>>>>>> origin
 np.save(join(SAVE_DIRECTORY, SAVE_DATASET_IMAGES_FILENAME), images)
 np.save(join(SAVE_DIRECTORY, SAVE_DATASET_LABELS_FILENAME), labels)

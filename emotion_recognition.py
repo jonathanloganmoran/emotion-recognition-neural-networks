@@ -41,7 +41,11 @@ class EmotionRecognition:
         )
         self.model = tflearn.DNN(
             self.network,
+<<<<<<< HEAD
+            checkpoint_path=SAVE_DIRECTORY,
+=======
             checkpoint_path=SAVE_DIRECTORY + '/emotion_recognition',
+>>>>>>> origin
             max_checkpoints=1,
             tensorboard_verbose=2
         )
@@ -104,5 +108,11 @@ if __name__ == "__main__":
         network.save_model()
     elif sys.argv[1] == 'poc':
         import poc
+<<<<<<< HEAD
+    elif sys.argv[1] == 'test':
+        #network.predict(network.dataset_loader())
+        network.predict(self.network, self.dataset)
+=======
+>>>>>>> origin
     else:
         show_usage()

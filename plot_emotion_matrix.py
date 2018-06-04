@@ -18,10 +18,18 @@ labels = labels.reshape([-1, len(EMOTIONS)])
 
 print('[+] Loading Data')
 data = np.zeros((len(EMOTIONS), len(EMOTIONS)))
+<<<<<<< HEAD
+for i in range(images.shape[0]):
+    result = network.predict(images[i])
+    #  print(result)
+    data[np.argmax(labels[i]), result[0].tolist().index(max(result[0]))] += 1
+# print (x[i], ' vs ', y[i])
+=======
 for i in xrange(images.shape[0]):
     result = network.predict(images[i])
     data[np.argmax(labels[i]), result[0].index(max(result[0]))] += 1
     # print x[i], ' vs ', y[i]
+>>>>>>> origin
 
 # Take % by column
 for i in range(len(data)):
